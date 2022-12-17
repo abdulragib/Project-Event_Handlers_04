@@ -45,11 +45,14 @@ password.addEventListener('change', (event) => {
 
 const form = document.getElementById('form');
 
-form.addEventListener('submit', (event) => {
+form.addEventListener('click', (event) => {
   event.preventDefault(); // prevent the form from being submitted
 
+  if (confirm('Are you sure you want to submit the form?')) {
+    alert('Successful signup!');
+  } else {
     // redirect to the same page and clear the input values
     window.location.href = window.location.href;
     form.reset();
-
+  }
 });
