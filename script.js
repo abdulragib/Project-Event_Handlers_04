@@ -53,6 +53,5 @@ form.addEventListener('click', (event) => {
   } else {
     // redirect to the same page and clear the input values
     window.location.href = window.location.href;
-    form.reset();
   }
 });
